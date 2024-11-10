@@ -1,0 +1,29 @@
+package Giris;
+import java.util.Scanner;
+public class Recursive_Us {
+
+    static int power(int a, int b){
+        int total=1;
+
+        if (b==0)
+        return 1;
+
+        total = power(a, (b - 1)) * a;
+
+        return total;
+        }
+
+
+    public static void main(String[] args) {
+
+        int x,y;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Üssü alınacak sayıyı giriniz : ");
+        x = input.nextInt();
+        System.out.print("Üs alınacak sayıyı giriniz : ");
+        y = input.nextInt();
+
+        System.out.print("Sonuç = " +power(x,y));
+
+    }
+}
